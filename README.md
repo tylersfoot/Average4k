@@ -33,7 +33,7 @@ end
 - Each parameter must have quotation marks (" ") surrounding the values, like `x="640"`
 - Python code that I used to generate an XML file:
 ```py
-# This code snippet writes a .xml file for an image asusming a consistent frame size, and that the frames are joined horizontally in the image
+# This code snippet writes a .xml file for an image assuming a consistent frame size, and that the frames are joined horizontally in the image
 frames = 51 # number of frames, aka image_width/frame_width
 frame_height = 480 # height of each frame, aka the image_height
 frame_width = 640 # width of each frame
