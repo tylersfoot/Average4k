@@ -137,7 +137,7 @@ try:
     print('removed img')
 except:
     pass
-img = cv2.imread('BA.png')
+img = cv2.imread('./data/BA.png')
 print('loaded img')
 width = 512000
 n = 4480
