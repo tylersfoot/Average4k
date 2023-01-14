@@ -90,7 +90,7 @@ with open(xml_directory, 'w') as f:
 print(f'Finished writing to {xml_directory}')
 ```
 
-# Skinning
+# Skinning (will revamp in b13)
 - Skins visually change different aspects of the game, most notably the notes/receptors and the menu.
 - Below is a basic tutorial on how to create a skin in Average4k.
 ### Getting Started
