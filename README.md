@@ -4,6 +4,15 @@ This is a collection of notes and observations about Average4k that I've observe
 Some things in here may go into more detail than the official documentation, but some things will also be missing.
 Feel free to let me know if you have any questions, corrections, or suggestions by contacting me, preferrably on Discord: tylersfoot#8888.
 
+## Info
+- [Community GitHub Wiki](https://github.com/WizardMantis441/a4k-docs/wiki)
+- [Kade's Documentation](https://kadedev.github.io/Avg4KModDocs/#/)
+- [Official Lua Documentation](https://www.lua.org/manual)
+- [Average4k Community Fandom](average4k.fandom.com/wiki/Average4k_Wiki)
+- [Wishlist the game on Steam](https://store.steampowered.com/app/1828580/Average4k)
+- [Development Trello Page](https://trello.com/b/2CVDM9k9/average4k-trello)
+- [Average4k Discord Server](https://discord.gg/p65upz2NNJ)
+
 ## Sprites:
 
 - Sprites can be still images or animated with a `.xml` file, shown in the next section.
@@ -166,7 +175,7 @@ print(f'Finished writing to {xml_directory}')
             ├── KadeDevTeam.png
             └── MiscLogo.png
 ```
-## config.skin
+### `config.skin` File:
 
 This file holds some configuration options to change when creating your skin.
 
@@ -184,7 +193,7 @@ up: image2
 right: image1
 ```
 
-### Skinning the menu
+### Skinning the menu:
 
 The final option in `config.skin` is `path`.
 
