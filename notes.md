@@ -7,13 +7,19 @@ Feel free to let me know if you have any questions, corrections, or suggestions 
 - Sprites can be still images or animated with a `.xml` file, shown in the next section.
 - Lua code snippet for loading a sprite in `mod.lua`:
 ```lua
-
+function create()
+    -- path: path to the sprite relative to the mod.lua folder, without the extension
+    -- name: name of the sprite
+    -- x, y: position of the sprite; 0, 0 is the top left corner of the screen
+    -- the sprite position is based on the top left corner of the sprite aswell
+	createSprite("path", "name", 0, 0)
+end
 ```
 - Regarding animations, not including the image or having an incorrect directory to the image results in a black image displayed.
 - Images wider than 32768px cannot be loaded - this has the same result as above, a black image displayed.
 - Interestingly, both of the above scenarios still result in an animation being played; it just results in each frame being black.
 
-### `.xml` Files:
+### `.xml' Files:
 - XML Files are used to define animations for sprites
 - `.xml` file format template:
 ```xml
@@ -23,7 +29,7 @@ Feel free to let me know if you have any questions, corrections, or suggestions 
     ...
 </TextureAtlas>
 ```
-- `name` must have a 4 digit number after it; it should be counting up from 1, including zeroes to fill the 4 digits, like so: 0001, 0002.. 0998, 0999
+- `name` must have a 4-digit number after it; it should be counting up from 1, including zeroes to fill the 4 digits, like so: 0001, 0002.. 0998, 0999
 - Each parameter must have quotation marks (" ") surrounding the values, like `x="640"`
 - Python code that I used to generate an XML file:
 ```py
