@@ -19,8 +19,8 @@ end
 - Images wider than 32768px cannot be loaded - this has the same result as above, a black image displayed.
 - Interestingly, both of the above scenarios still result in an animation being played; it just results in each frame being black.
 
-### `.xml' Files:
-- XML Files are used to define animations for sprites
+### `.xml` Files:
+- XML Files are used to define animation frames for sprites.
 - `.xml` file format template:
 ```xml
 <TextureAtlas imagePath="name.png">
