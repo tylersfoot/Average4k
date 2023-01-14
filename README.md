@@ -8,7 +8,7 @@ Feel free to let me know if you have any questions, corrections, or suggestions 
 - [Community GitHub Wiki](https://github.com/WizardMantis441/a4k-docs/wiki)
 - [Kade's Documentation](https://kadedev.github.io/Avg4KModDocs/#/)
 - [Official Lua Documentation](https://www.lua.org/manual)
-- [Average4k Community Fandom](average4k.fandom.com/wiki/Average4k_Wiki)
+- [Average4k Community Fandom](https://average4k.fandom.com/wiki/Average4k_Wiki)
 - [Wishlist the game on Steam](https://store.steampowered.com/app/1828580/Average4k)
 - [Development Trello Page](https://trello.com/b/2CVDM9k9/average4k-trello)
 - [Average4k Discord Server](https://discord.gg/p65upz2NNJ)
