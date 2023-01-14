@@ -4,7 +4,7 @@ This is a collection of notes and observations about Average4k that I've observe
 Some things in here may go into more detail than the official documentation, but some things will also be missing.
 Feel free to let me know if you have any questions, corrections, or suggestions by contacting me, preferrably on Discord: tylersfoot#8888.
 
-## Info
+## Information/Links
 - [Community GitHub Wiki](https://github.com/WizardMantis441/a4k-docs/wiki)
 - [Kade's Documentation](https://kadedev.github.io/Avg4KModDocs/#/)
 - [Official Lua Documentation](https://www.lua.org/manual)
@@ -12,6 +12,22 @@ Feel free to let me know if you have any questions, corrections, or suggestions 
 - [Wishlist the game on Steam](https://store.steampowered.com/app/1828580/Average4k)
 - [Development Trello Page](https://trello.com/b/2CVDM9k9/average4k-trello)
 - [Average4k Discord Server](https://discord.gg/p65upz2NNJ)
+
+# Modcharting
+
+## Directory
+- Below is an example of a basic directory for a modchart.
+```
+└── pack/
+    └── song/
+        ├── song.sm
+        ├── song.wav
+        ├── bg.png 
+        └── mod/
+            ├── mod.lua
+            ├── spritesheet.png
+            └── spritesheet.xml
+```
 
 ## Sprites:
 
@@ -205,7 +221,7 @@ When set to `path: default` , the skin will take the default menu elements from 
 4. Skin the menu! All changes made to the images in this folder will apply to your game when your skin is selected.
 
 
-# Updates
+# Update Changelog
 
 ### b11 - 06/12/2022
 Features:
@@ -279,7 +295,6 @@ Fixes:
 - Editor is no longer a lag mess (as much as before)
 - Fixed a bug where a 0 offset chart would result in a bpm segment being found as a bpm of 120 (not having the correct bpm meant the notes were not correct)
 - Fixed an issue where closing the game would hang (it no longer does this)
-
 
 Miscellaneous:
 - Implemented a new EULA (preview can be found here: https://store.steampowered.com/eula/1828580_eula_0 (and no we aren't collecting your data lmao)
