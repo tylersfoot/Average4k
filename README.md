@@ -89,3 +89,108 @@ with open(xml_directory, 'w') as f:
     f.writelines(lines)
 print(f'Finished writing to {xml_directory}')
 ```
+
+# Skinning
+- Skins visually change different aspects of the game, most notably the notes/receptors and the menu.
+- Below is a basic tutorial on how to create a skin in Average4k.
+### Getting Started
+- To create a skin, navigate to the Average4k folder from steam (Average4k->Settings->Manage->Browse local files), then go to `assets\noteskin`. In here is where all of the skins (including the default ones) are located.
+- From here, make a copy of one of the default skins, and rename it to whatever you like. You can now change all of the note images and edit the `config.skin` file, explained below.
+- Here is an example directory of my personal skin folder:
+```
+└── tylersfoot skin v1.2/
+    ├── config.skin
+    ├── hold.png
+    ├── holdend.png
+    ├── idfk.png
+    ├── lit.png
+    ├── out.png
+    ├── receptor.png
+    └── menu/
+        ├── Gameplay/
+        │   ├── crown.png
+        │   ├── leftBorder.png
+        │   ├── leftGraid.png
+        │   ├── rightGraid.png
+        │   ├── underway.png
+        │   └── underwayBorder.png
+        ├── Menu/
+        │   ├── avg4k.png
+        │   ├── bg.png
+        │   ├── border.png
+        │   ├── close.png
+        │   ├── darkmodebg.png
+        │   ├── genericAvatar.png
+        │   ├── majorerroricon.png
+        │   ├── minorerroricon.png
+        │   ├── roundedbutton_ok.png
+        │   ├── TheWhitePixel.png
+        │   ├── Container/
+        │   │   ├── dropdownarrow.png
+        │   │   └── scroll_arrow.png
+        │   └── MainMenu/
+        │       ├── Multi/
+        │       │   ├── carat.png
+        │       │   ├── checkbox.png
+        │       │   ├── filtercontainer.png
+        │       │   ├── lobbycontainer.png
+        │       │   ├── lobbysearch.png
+        │       │   ├── maincontainer.png
+        │       │   ├── sortby_dropdown.png
+        │       │   └── sortbycontainer.png
+        │       ├── Settings/
+        │       │   ├── dropdown.png
+        │       │   ├── dropdownItem.png
+        │       │   ├── endOfDropdown.png
+        │       │   ├── maincontainer.png
+        │       │   ├── previewicon.png
+        │       │   ├── searchcontainer.png
+        │       │   ├── settingssearch.png
+        │       │   ├── toggle.png
+        │       │   ├── toggle_bg.png
+        │       │   └── typeinputcontainer.png
+        │       └── Solo/
+        │           ├── diffSelectArrow.png
+        │           ├── leftcontainer.png
+        │           ├── maincontainer.png
+        │           ├── maincontainer_solo.png
+        │           ├── packscontainer.png
+        │           ├── packsearchbar.png
+        │           ├── songcontainer.png
+        │           ├── wheelContainer.png
+        │           └── wheelTop.png
+        ├── Music/
+        │   ├── MenuTheme.meta
+        │   └── MenuTheme.wav
+        └── Start/
+            ├── KadeDevTeam.png
+            └── MiscLogo.png
+```
+## config.skin
+
+This file holds some configuration options to change when creating your skin.
+
+`rotate` (true/false) - Rotates the sprite's orientation depending on it's direction; Useful for arrow skins.
+
+`shrink` (true/false) - Shrinks the receptors depending on if they are being held or not.
+
+`bounce` (true/false) - Makes the combo and judgement text bounce when a note is played.
+
+`disableQuant` (true/false) - Disables the note color quantization. If set to true, specify the image file to use for each lane. An example is shown below, where the directions specify the notes and the text following it specifies the image file name, without the extension.
+```
+left: image1
+down: image2
+up: image2
+right: image1
+```
+
+### Skinning the menu
+
+The final option in `config.skin` is `path`.
+
+When set to `path: default` , the skin will take the default menu elements from the base game. In order to change the menu elements, follow the steps below:
+
+1. In the `assets` folder, copy the entire `skinDefaults` folder.
+2. Paste the folder in your custom skin folder, and rename it to whatever you want (I'll use `skinAssets` for the sake of this tutorial)
+3. In `config.skin`, change the path to the name of the folder (`path: skinAssets`)
+4. Skin the menu! All changes made to the images in this folder will apply to your game when your skin is selected.
