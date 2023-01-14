@@ -284,8 +284,8 @@ Features:
 - Added "config.displayWidth" and "config.displayHeight" which returns the current resolution set by the user (note: the gameplay field is stretched from 1280x720 to fill up every other resolution)
 - Added mines
 - Added fakes
-- Added setModProperty, getModProperty, getSpriteMod, setAutoEnd, and setAutoEnd to lua api
-- Added key_pressed, key_released, and editor_scroll to the lua api
+- Added `setModProperty`, `getModProperty`, `getSpriteMod`, `setAutoEnd`, and `setAutoEnd` to lua api
+- Added `key_pressed`, `key_released`, and `editor_scroll` to the lua api
 
 Fixes:
 - Fixed multiple issues with leaderboards, including separate diffs for leaderboards, submitting completely different charts under a leaderboard, and some other misc issues.
@@ -295,6 +295,7 @@ Fixes:
 - Editor is no longer a lag mess (as much as before)
 - Fixed a bug where a 0 offset chart would result in a bpm segment being found as a bpm of 120 (not having the correct bpm meant the notes were not correct)
 - Fixed an issue where closing the game would hang (it no longer does this)
+- Fixed an issue where hold notes would prematurely end before they should have
 
 Miscellaneous:
 - Implemented a new EULA (preview can be found here: https://store.steampowered.com/eula/1828580_eula_0 (and no we aren't collecting your data lmao)
