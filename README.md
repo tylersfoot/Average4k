@@ -1,4 +1,4 @@
-# Average4k Notes
+# Average4k Notes - Update b12 - 1/14/23
 
 This is a collection of notes and observations about Average4k that I've observed.
 Some things in here may go into more detail than the official documentation, but some things will also be missing.
@@ -203,3 +203,104 @@ When set to `path: default` , the skin will take the default menu elements from 
 2. Paste the folder in your custom skin folder, and rename it to whatever you want (I'll use `skinAssets` for the sake of this tutorial)
 3. In `config.skin`, change the path to the name of the folder (`path: skinAssets`)
 4. Skin the menu! All changes made to the images in this folder will apply to your game when your skin is selected.
+
+
+# Updates
+
+### b11 - 06/12/2022
+Features:
+- Added a leaderboard
+- Added support for importing .osz, .qp, and stepamia pack folders
+- Added drag and drop support for importing songs
+
+Fixes:
+- Other minor fixes
+
+### b11.1 - 08/24/2022
+Features:
+- Added wine support (technically you can play on a steamdeck now)
+- Added new multiplayer menu
+
+Fixes:
+- Miscilaneous fixes 
+
+### b11.2.2 - 09/06/2022
+Features:
+- Added StealthOpacity, StealthWhite, StealthReceptorOpacity to modchart docs
+- Added a "create lobby" button and textbox as a temporary way to create custom lobbies
+
+Fixes:
+- Multiplayer leaderboard no longer breaks when someone leaves midgame
+- Multiplayer now tells the host more detailed information on who has the chart
+- Multiplayer now tells the new host they're the host midgame if the old one leaves
+- Chat now resets every time you join a lobby
+- Fixed a memory leak when removing a song's audio from the games memory
+- Fixed being able to toggle options from the select song screen
+- Fixed a bug when refreshing the pack list, it would still act like there is a scroll bar even though there isn't
+- Fixed a bug where you could only open the leaderboard once for a song.
+- Fixed a bug where when selecting a multiplayer lobby, the game would sometimes break, and you'd have to go to settings and back to the multiplayer tab to fix it
+- Properly orientated the download percentage
+- removed herobrine
+
+### b12 - 10/02/2022
+Features:
+- Added .ssc support
+- Added lua error reporting
+- Added 64th quantized notes
+- Added song position bar 
+- Added a new bar skin
+
+Fixes:
+- scrolling on the wheel now lets you go up to the bottom
+
+Misc:
+- Removed support uploading individual songs to the Workshop; you can now only upload packs
+
+### b13 - WIP
+Features:
+- Added a "More Info" panel to the song selection screen. Accessible by using "tab", replacing the leaderboard with a better one
+- Added "linear" as an easing option in "activateMod" functions
+- Added 4 new Steam Achievements
+- Added a new folder into the skin directory called "judgements" which now allow you to customize the judgement and combo counter texts
+- Added the "soundPath" property to skins to allow you to set a custom sound path (like changing menu elements). Currently, the sounds are "hitSound.wav" and "beatTick.wav"
+- Added back the "Resolution" setting and fixed resolutions, so they actually work correctly instead of breaking the game
+- Added "config.scrollSpeed" which returns the current user scrollspeed
+- Added "config.displayWidth" and "config.displayHeight" which returns the current resolution set by the user (note: the gameplay field is stretched from 1280x720 to fill up every other resolution)
+- Added mines
+- Added fakes
+- Added setModProperty, getModProperty, getSpriteMod, setAutoEnd, and setAutoEnd to lua api
+- Added key_pressed, key_released, and editor_scroll to the lua api
+
+Miscilaneous:
+Implemented a new EULA (preview can be found here: https://store.steampowered.com/eula/1828580_eula_0 (and no we aren't collecting your data lmao)
+Features:
+
+Added a "More Info" panel to the song selection screen. Accessible by using "tab." Replacing the leaderboard with a better one.
+Added "linear" as an easing option in "activateMod" functions
+Added 4 new Achievements
+Added a new folder into the skin directory called "judgements" which now allow you to customize the judgement and combo counter texts
+Added the "soundPath" property to skins to allow you to set a custom sound path (like changing menu elements). Currently the sounds are "hitSound.wav" and "beatTick.wav"
+Added back the "Resolution" setting and fixed resolutions so they actually work correctly instead of breaking the game.
+Added "config.scrollSpeed" which returns the current user scrollspeed.
+Added "config.displayWidth" and "config.displayHeight" which returns the current resolution set by the user (note: the gameplay field is stretched from 1280x720 to fill up every other resolution)
+Added mines
+Added fakes
+Added setModProperty, getModProperty, getSpriteMod, setAutoEnd, and setAutoEnd to lua api (Docs can be found here Functions (kadedev.github.io))
+Added key_pressed, key_released, and editor_scroll to the lua api (Docs can be found here Events (kadedev.github.io))
+Changed:
+
+Changed the "How" achievement icon
+More Info now shows average nps, and max nps.
+More Info allows you to select a leaderboard score to show a hit graph of that score
+Overhauled the logging system (it should stop bricking people's games now lol)
+Made "activateMod" functions no longer start on the "0"th beat if the game doesn't load on it. (Basically, it now starts as soon as it is done loading if set on the 0th beat)
+You can now leave a lobby while playing in game if you are not the host
+Bugs Fixed:
+
+Fixed multiple issues with leaderboards, including separate diffs for leaderboards, submitting completely different charts under a leaderboard, and some other misc issues.
+"activateMod" functions now also complete instantly if their length is 0
+Hitsounds now stack
+Editor no longer crashes that much (including the mod editor)
+Editor is no longer a lag mess (as much as before)
+Fixed a bug where a 0 offset chart would result in a bpm segment being found as a bpm of 120 (not having the correct bpm meant the notes were not correct)
+Fixed an issue where closing the game would hang (it no longer does this)
