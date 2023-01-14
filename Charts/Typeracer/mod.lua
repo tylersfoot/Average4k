@@ -37,7 +37,6 @@ function create()
             converted[i] = keycode
         end
     end
-
     -- move the receptors offscreen
     activateMod("amovey", 0, 0, "outCubic", -100000)
 
