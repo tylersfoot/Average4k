@@ -28,7 +28,16 @@ Feel free to let me know if you have any questions, corrections, or suggestions 
         └── ...
 ```
 - `pack.meta` is a small file that contains information about the pack:
-  - `banner` - The path of the banner image for your pack. Should be size: (tbd)
+  - `banner` - The path of the banner image for your pack.
+    - Any other size will be scaled to fit. For example, a square image will be vertically squished.
+    - version b13 or higher:
+      - The "recommended" size is 300x75. However, since the banner on-screen is only 275x75, this will be squished a bit horiontally.
+      - Unlike earlier, there is no need to make the banner transparent as it will no longer cut off any pixels on the right.
+    - version b12 or lower:
+      - The "recommended" size is 275x75. However, in my testing, I found that the best possible banner size is: 300x73
+        - Using this, the banner's y-axis will NOT be streched or cut off at all.
+        - For the x-axis, make the banner's content only 275px wide with 25px of transparency.
+        - So, banner content: 275x73, with a 25x73 transparent border on the right side.
   - `packName` - The name of the song pack. This will show up in the workshop.
   - `showName` - Determines whether the `packName` will be shown on top of the banner. Should be `false` if your banner has the name on it.
 - Example below:
@@ -318,6 +327,7 @@ Fixes:
 - Fixed a bug where a 0 offset chart would result in a bpm segment being found as a bpm of 120 (not having the correct bpm meant the notes were not correct)
 - Fixed an issue where closing the game would hang (it no longer does this)
 - Fixed an issue where hold notes would prematurely end before they should have
+- Fixed pack banner scaling/sizing
 
 Miscellaneous:
 - Implemented a new EULA (preview can be found here: https://store.steampowered.com/eula/1828580_eula_0 (and no we aren't collecting your data lmao)
