@@ -13,20 +13,42 @@ Feel free to let me know if you have any questions, corrections, or suggestions 
 - [Development Trello Page](https://trello.com/b/2CVDM9k9/average4k-trello)
 - [Average4k Discord Server](https://discord.gg/p65upz2NNJ)
 
-# Modcharting
+# Modcharting/Song Packs
+### Song Pack Directory
+- Below is an example of a song pack directory.
+```
+└── pack name/
+    ├── banner.png
+    ├── pack.meta
+    ├── song1/
+    │   └── ...
+    ├── song2/
+    │   └── ...
+    └── song3/
+        └── ...
+```
+- `pack.meta` is a small file that contains information about the pack:
+  - `banner` - The path of the banner image for your pack. Should be size: (tbd)
+  - `packName` - The name of the song pack. This will show up in the workshop.
+  - `showName` - Determines whether the `packName` will be shown on top of the banner. Should be `false` if your banner has the name on it.
+- Example below:
+```meta
+banner: banner.png
+packName: Super Awesome Pack v1.0
+showName: true
+```
 
-## Directory
+### Modchart Directory
 - Below is an example of a basic directory for a modchart.
 ```
-└── pack/
-    └── song/
-        ├── song.sm
-        ├── song.wav
-        ├── bg.png 
-        └── mod/
-            ├── mod.lua
-            ├── spritesheet.png
-            └── spritesheet.xml
+└── song/
+    ├── song.sm
+    ├── song.wav
+    ├── bg.png 
+    └── mod/
+        ├── mod.lua
+        ├── spritesheet.png
+        └── spritesheet.xml
 ```
 
 ## Sprites:
