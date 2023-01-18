@@ -31,8 +31,9 @@ Feel free to let me know if you have any questions, corrections, or suggestions 
   - `banner` - The path of the banner image for your pack.
     - Any other size will be scaled to fit. For example, a square image will be vertically squished.
     - version b13 or higher:
-      - The "recommended" size is 300x75. However, since the banner on-screen is only 275x75, this will be squished a bit horiontally.
-      - Using a 275x75 image will prevent this squishing. (UNTESTED)
+      - The "recommended" size is 300x75. By default, all packs DO show as 300x75, so no stretching will occur.
+      - However, if the user has enough packs to have a scrollbar, the banners will be squashed to 275x75.
+      - Since there is nothing you can do about this at the moment, I recommend making your banner 300x75.
       - Unlike earlier, there is no need to make the banner transparent as it will no longer cut off any pixels on the right.
     - version b12 or lower:
       - The "recommended" size is 275x75. However, in my testing, I found that the best possible banner size is: 300x73
