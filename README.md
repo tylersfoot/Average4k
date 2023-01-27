@@ -1,4 +1,4 @@
-# Average4k Notes - Update b12 - 1/14/23
+# Average4k Notes - Update b13h - 1/27/23
 
 This is a collection of notes and observations about Average4k that I've observed.
 Some things in here may go into more detail than the official documentation, but some things will also be missing.
@@ -306,7 +306,7 @@ Fixes:
 Miscellaneous:
 - Removed support uploading individual songs to the Workshop; you can now only upload packs
 
-### b13 - WIP
+### b13 - 1/21/2023
 Features:
 - Added a "More Info" panel to the song selection screen. Accessible by using "tab", replacing the leaderboard with a better one
 - Added "linear" as an easing option in "activateMod" functions
@@ -340,3 +340,9 @@ Miscellaneous:
 - Overhauled the logging system
 - Made "activateMod" functions no longer start on the "0"th beat if the game doesn't load on it. (Basically, it now starts as soon as it is done loading if set on the 0th beat)
 - You can now leave a lobby while playing in game if you are not the host
+
+### b13h - 1/22/2023
+Fixes:
+- Much faster loading times
+- Added `String` library support in lua modcharts
+- Fixed minor/unspecified bugs
