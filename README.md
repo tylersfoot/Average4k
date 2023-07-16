@@ -149,6 +149,9 @@ with open(xml_directory, 'w') as f:
 print(f'Finished writing to {xml_directory}')
 ```
 
+# Shaders
+
+
 # Skinning (will revamp in b13)
 - Skins visually change different aspects of the game, most notably the notes/receptors and the menu.
 - Below is a basic tutorial on how to create a skin in Average4k.
@@ -290,7 +293,7 @@ Fixes:
 - Fixed a bug where you could only open the leaderboard once for a song.
 - Fixed a bug where when selecting a multiplayer lobby, the game would sometimes break, and you'd have to go to settings and back to the multiplayer tab to fix it
 - Properly orientated the download percentage
-- removed herobrine
+- ***removed herobrine***
 
 ### b12 - 10/02/2022
 Features:
