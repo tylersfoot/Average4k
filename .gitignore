@@ -1,4 +1,6 @@
 venv/
 data/
 .idea/
-Archives/
+b12 build/
+data backup/
+*.old
