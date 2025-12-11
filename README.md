@@ -1,3 +1,8 @@
+> [!NOTE]
+> I did not make Average4k! Check out the game's developer, [Kade](https://github.com/Kade-github)
+
+
+
 # Average4k Notes - Update b13h - 1/27/23
 
 This is a collection of notes and observations about Average4k that I've observed.
